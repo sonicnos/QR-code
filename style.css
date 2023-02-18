@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+}
+
+
 body {
-    height: 98vh;
-    background: hsl(212, 45%, 89%); 
+    height: 100vh;
+    background: var(--Light-gray); 
     font-family: Outfit, sans-serif; 
     font-size: 15px;
     display: flex; 
@@ -11,33 +25,49 @@ body {
 }
 
 .main-box {
-    width: 250px;
-    min-height: 250px;
-    background-color: white;
-    padding: 20px;
+    width: 320px;
+    height: 500px;
+    background-color: var(--White);
+    padding: 16px;
     border: 1px solid hsl(212, 45%, 89%);
     border-radius: 20px;   
+    box-shadow: 0px 25px 30px rgba(123, 135, 157, .12);
 }
 
-.main-box .qr-box img{
+.qr-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
-    width: 250px;
+}
+
+.main-box .qr-box img{
+    width: 100%;
     border-radius: 15px;   
 }
 
+.title, .qr-description {
+    text-align: center;
+}
+
 .title {
-    font-weight: 700; 
+    font-weight: 700;
+    font-size: 24px;
+    margin: 16px 0px;
+}
+
+.qr-description p {
+    color: var(--Grayish-blue);
+    font-size: 17px;
 }
 
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    display: inline;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--Dark-blue); 
 }
